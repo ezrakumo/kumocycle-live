@@ -49,7 +49,7 @@ export function ArtisanDashboard() {
 
     const fetchJobs = async () => {
       try {
-        const { data, error } = await supabase
+        const { data } = await supabase
           .from('bookings')
           .select('*')
           .eq('status', 'pending')
